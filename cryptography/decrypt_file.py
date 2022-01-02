@@ -1,25 +1,23 @@
 from cryptography.fernet import Fernet
 
-key = " " #key from the generator key
+key = "UEEnOeF61l4St2C_-0LRcCXxmPiaQq49REBPzJpEovo="  # key from the generator key
 
-#get the three files you want to unencrypt ( the e version)
+keys_information_e = "log_e.txt"  # getting the files we want to decrypt
+system_info_e = "sysinfo_e.txt"
+clipboard_info_e = "clipboard_e.txt"
 
-encrypted_files = [fff,fff,fff]
+encrypted_files = [keys_information_e, system_info_e, clipboard_info_e]
 count = 0
 
 for decrypting_file in encrypted_files:
+    with open(encrypted_files[count], 'rb') as f:  # open up each file
+        data = f.read()
 
-        with open(encrypted_files[count], 'rb') as f:  # open up each file
-            data = f.read()
+    fernet = Fernet(key)
+    decrypted = fernet.decrypt(data)
 
-        fernet = Fernet(key)
-        decrypted = fernet.decrypt(data)
+    with open(encrypted_files[count], 'wb') as f:
+        f.write(decrypted)
 
-        with open(encrypted_files[count], 'wb') as f:
-            f.write(decrypted)
-
-
-        count += 1
-
-        time.sleep(120)  # each iteration to slepe for 2 emails for emails to be sent
+    count += 1
 
