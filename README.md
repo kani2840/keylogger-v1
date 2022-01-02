@@ -1,5 +1,7 @@
 # keylogger-v1
 
+for educational purposes only!
+
 ### background: malware using python
 - There has been a [rise of python malware](https://www.cyborgsecurity.com/cyborg_labs/python-malware-on-the-rise/) in the last few years. 
 - Python's large library collection and ease of use make it ideal for malware developers.
